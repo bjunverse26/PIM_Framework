@@ -2,7 +2,7 @@
 
 Llama 계열 대규모 언어모델에 대해 `SmoothQuant`, linear fake quantization, custom attention, 그리고 PIM 하드웨어 효과를 함께 적용해 perplexity를 평가하는 연구용 프레임워크입니다.
 
-이 프로젝트의 핵심은 단순한 양자화 실험이 아니라, LLM 연산 경로 안에 실제 메모리 소자 특성과 PIM 연산 제약을 직접 반영합입니다.
+이 프로젝트의 핵심은 단순한 양자화 실험이 아니라, LLM 연산 경로 안에 실제 메모리 소자 특성과 PIM 연산 제약을 직접 반영합니다.
 
 ## Overview
 
