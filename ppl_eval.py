@@ -19,7 +19,7 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 warnings.filterwarnings("ignore", category=FutureWarning)
 torch.cuda.set_device(0)
 
-# 실행 인자(Argument) 설정 2025.03.11, Minki Choi
+# 실행 인자(Argument) 설정 - 2025.03.11, Minki Choi
 parser = argparse.ArgumentParser()
 parser.add_argument("--alpha", type=float, default=0.5) # SmoothQuant의 이동 계수
 parser.add_argument("--model_path", type=str, default="/home/oem/Llama-2-7b-hf")
