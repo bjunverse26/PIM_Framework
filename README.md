@@ -36,9 +36,9 @@ linear layer와 attention matmul 경로 모두에 대해 bit-serial accumulation
 - 디버깅/보조 코드 제거 후 핵심 경로 중심으로 구조 단순화
 - `ppl_eval.py`, `fake_quant.py`, `custom_attention.py`, `hw_effect.py`, `smooth.py` 중심으로 실험 구조 정리
 
-## Beomjun Kim 기여 사항
+## 프로젝트 핵심 기여 사항
 
-코드 주석 기준으로 직접 기여한 핵심은 아래와 같습니다.
+직접 기여한 핵심은 아래와 같습니다.
 
 - `fake_quant.py`
   물리적 noise 및 retention error 적용
