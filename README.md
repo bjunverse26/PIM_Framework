@@ -88,3 +88,20 @@ PIM_Framework/
 +-- smooth.py
 +-- LICENSE
 +-- README.md
+```
+
+## 주요 파일
+
+- `ppl_eval.py`: 실험 진입점, 모델 로드, 옵션 파싱, perplexity 평가
+- `smooth.py`: Llama decoder layer 대상 SmoothQuant 적용
+- `fake_quant.py`: linear layer 양자화 및 PIM-aware `W8A8Linear` 구현
+- `custom_attention.py`: custom Llama attention forward 구현
+- `hw_effect.py`: retention, noise, ADC helper 함수
+- `calibration.py`: activation scale 수집용 calibration 코드
+
+## 결과
+
+- Llama 추론 경로에 PIM 하드웨어 효과를 직접 반영하는 평가 프레임워크 구축
+- linear layer뿐 아니라 attention matmul까지 hardware-aware simulation 확장
+- `Ion`, `Ioff`, `Vread`, retention, noise, ADC precision을 실제 연산 경로에 반영
+- perplexity 기반으로 모델 정확도와 하드웨어 제약 사이의 trade-off를 평가할 수 있는 구조 구현
