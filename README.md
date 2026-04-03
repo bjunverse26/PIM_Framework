@@ -40,10 +40,10 @@ linear layer와 attention matmul 경로 모두에 대해 bit-serial accumulation
 
 직접 기여한 핵심은 아래와 같습니다.
 
-- `fake_quant.py`: 물리적 noise 및 retention error 적용, 아날로그 선형 연산 수행, ADC 변환 및 디지털 복원(correction) 경로 반영
-- `custom_attention.py`: PV matmul 하드웨어 시뮬레이션 적용, attention 경로에서 retention 효과 반영
+- `fake_quant.py`: 물리적 noise 및 retention error 적용, 아날로그 선형 연산 반영
+- `custom_attention.py`: KV matmul 하드웨어 시뮬레이션 적용, attention 경로에서 retention 효과 반영
 - `hw_effect.py`: retention / ADC helper 보강
-- `ppl_eval.py`: KV cache / attention 하드웨어 시뮬레이션 파라미터 구성, WikiText-2 기반 evaluation entry 정리
+- `ppl_eval.py`: KV cache / attention 하드웨어 시뮬레이션 파라미터 구성
 
 ## 기능
 
